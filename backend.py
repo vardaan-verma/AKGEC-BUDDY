@@ -762,4 +762,4 @@ async def test_intent_classification(request: dict):
 logging.basicConfig(level=logging.INFO)
 
 if __name__ == "__main__":
-    uvicorn.run("backenddemo2:app", host="127.0.0.1", port=8081, reload=True)
+    uvicorn.run("backend:app", host="127.0.0.1", port=8081, reload=True)

@@ -10,6 +10,10 @@ import logging
 from typing import Optional, Dict, List, Tuple
 import uvicorn
 import re
+from dotenv import load_dotenv
+load_dotenv()
+
+
 # Google GenAI imports
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage
@@ -31,7 +35,7 @@ class Config:
     GOOGLE_MODEL = "gemini-1.5-flash"  # or gemini-1.5-pro
     
     # Add your Google API key here or set as environment variable
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyD9LyvLn59WJeZPfLCtftnJBdkd7VVDouo")
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 config = Config()
 
